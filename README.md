@@ -4,22 +4,22 @@ A basic TCP server implementation includes:
 
   A three-way handshake used to establish the connection betwen the server and client.
 
-  1. Client sends a SYN packet
-  2. Server send back a SYN-ACK packet
-  3. Client sends an ACK packet
+  1. Client sends a `SYN` packet
+  2. Server send back a `SYN-ACK` packet
+  3. Client sends an `ACK` packet
 
 - Connection states
 
-  - LISTEN
-  - SYN-SENT
-  - SYN-RECEIVED
-  - ESTABLISHED
-  - FIN-WAIT-1
-  - FIN-WAIT-2
-  - CLOSE-WAIT
-  - CLOSING
-  - LAST-ACK
-  - TIME-WAIT 
+  - `LISTEN`
+  - `SYN-SENT`
+  - `SYN-RECEIVED`
+  - `ESTABLISHED`
+  - `FIN-WAIT-1`
+  - `FIN-WAIT-2`
+  - `CLOSE-WAIT`
+  - `CLOSING`
+  - `LAST-ACK`
+  - `TIME-WAIT`
 
 - Data transmission
 
@@ -33,15 +33,16 @@ A basic TCP server implementation includes:
 
   Typically uses a four-way handshake:
   
-    1. Sender sends FIN packet
-    2. Receiver sends ACK packet
-    3. Receiver sends FIN packet
-    4. Sender sends ACK packet
+    1. Sender sends `FIN` packet
+    2. Receiver sends `ACK` packet
+    3. Receiver sends `FIN` packet
+    4. Sender sends `ACK` packet
   
   Either the sender or receiver can initiate the termination.
 
 - TCP Header
 
+```
        0                   1                   2                   3
     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -61,4 +62,4 @@ A basic TCP server implementation includes:
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
    |                             data                              |
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-  
+```
