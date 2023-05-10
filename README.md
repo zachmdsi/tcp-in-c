@@ -1,4 +1,8 @@
-A basic TCP server implementation includes:
+# TCP Server in C
+
+This program is a basic implementation of a TCP server in C. For learning purposes only.
+
+## RFC-793 Overview
 
 - Connection Establishment
 
@@ -25,19 +29,19 @@ A basic TCP server implementation includes:
 
   TCP transmits data as internat datagrams that contain:
 
-    - Sequence number: position of segment in the stream of data
-    - Acknowledgement number: indicates the position of the next segment
-    - Flow control: uses a window size to indicate the send/receive data limit
+  - Sequence number: position of segment in the stream of data
+  - Acknowledgement number: indicates the position of the next segment
+  - Flow control: uses a window size to indicate the send/receive data limit
 
 - Connection termination
 
   Typically uses a four-way handshake:
-  
-    1. Sender sends `FIN` packet
-    2. Receiver sends `ACK` packet
-    3. Receiver sends `FIN` packet
-    4. Sender sends `ACK` packet
-  
+
+  1. Sender sends `FIN` packet
+  2. Receiver sends `ACK` packet
+  3. Receiver sends `FIN` packet
+  4. Sender sends `ACK` packet
+
   Either the sender or receiver can initiate the termination.
 
 - TCP Header
@@ -63,3 +67,5 @@ A basic TCP server implementation includes:
    |                             data                              |
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
+
+NOTE: All of these things should be taken care of by your OS automatically, but is still good to know.
