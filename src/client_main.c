@@ -8,7 +8,12 @@ int main() {
         return -1;
     }
 
-    // Client logic goes here
+    const char *message = "Hello, Server!";
+    if (send(client_sock, message, strlen(message), 0) == -1) {
+        perror("Error sending message");
+    }
+
+    close(client_sock);
 
     return 0;
 }
